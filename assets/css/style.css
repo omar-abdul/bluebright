@@ -1,0 +1,211 @@
+/*  globals */
+body{
+	font:15px/1.5 Arial, Helvetica, sans-serif;
+	padding: 0;
+	margin: 0;
+	background-color: #f4f4f4;
+}
+
+
+
+.container {
+	width: 80%;
+	margin: auto;
+	overflow: hidden;
+}
+
+header {
+	background-color: #35424a;
+	color:#ffffff;
+	padding-top: 30px;
+	min-height: 50px;
+	position: fixed;
+	min-width: 100%;
+}
+ ul{
+	margin: 0;
+	padding: 0;
+}
+
+header a{
+	color:#ffffff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 16px;
+}
+
+
+header li {
+	float: left;
+	display: inline;
+	padding: 0 20px 0 20px; 
+}
+
+input[type='text'], 
+ input[type='email'],
+  textarea{
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-top: 1px solid #ccc;
+
+
+    border-radius: 4px;
+    background-color: inherit;
+    font-size: 20px;
+    font-family: inherit;
+    resize: vertical;
+}
+textarea{
+	border-bottom: 1px solid #ccc;
+}
+
+input:focus, textarea:focus{
+	outline: none;
+}
+
+.form-input input, .form-input textarea{
+	margin-top: 30px;
+
+}
+
+.form-input .submit-btn{
+
+	width: 100%;
+
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+.row .col-side {
+    float: left;
+    width: 35%;
+    margin-top: 6px;
+    margin-right: 10px;
+    margin-left: 10px
+}
+
+.row .col-main{
+    float: left;
+    width: 60%;
+    margin-top: 6px;
+    margin-right: 10px;
+    margin-left: 10px
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+
+.submit-btn {
+	background-color: #60afff;
+	color: #fff;
+    padding: 15px 32px;
+    text-align: center;
+	border:none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+.submit-btn:hover{
+	background-color: #479ef7;
+}
+.logo img{
+	margin-top:50px;
+	width: 260px;
+}
+.content p{
+	text-align: justify;
+}
+/*  header */
+
+header #branding{
+	float:left;
+}
+header #branding img{
+	margin:0;
+	width: 260px;
+	margin-top: -25px;
+}
+header nav {
+	float: right;
+	margin-top: 10px;
+}
+
+header .current a{
+	color:#7bbffc;
+	font-weight: bold;
+}
+
+header a:focus ,header a:hover {
+	color:#cccccc;
+}
+
+#cover {
+   background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../img/clean-cleaning-mop.jpg") no-repeat;
+   background-size: cover;
+   background-position: center;
+   height:100vh;
+   color: #fff;
+   display:flex;
+   flex-direction: column;
+   justify-content:center;
+   align-items:center;
+   text-align: center;
+   padding:0 40px;
+}
+#cover h2{
+	margin-top: 100px;
+	margin-bottom: 10px;
+	font-size: 40px;
+
+}
+#cover p {
+	font-size: 20px;
+}
+
+#contact-form {
+	padding: 20px;
+	margin:auto;
+	background-color: #dee2e5;
+	text-align: center;
+}
+#about {
+	padding: 20px;
+	margin:auto;
+	background-color: #dee2e5;
+}
+#services {
+
+	background-color: #edeeef;
+	padding: 20px;
+
+}
+
+#services .box {
+	float: left;
+	text-align: justify;
+	text-align-last: center;
+	width: 25%;
+	padding: 10px;
+	margin-left:50px;
+	
+}
+footer {
+	padding:20px;
+	color: #ffffff;
+	background-color: #3b3c3d;
+	text-align:center;
+}
