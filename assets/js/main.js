@@ -9,13 +9,6 @@ function stickyNav(){
 
 	nav.classList.add("sticky");
 
-	if(window.pageYOffset >=sticky+100){
-
-		nav.classList.add('white-nav');
-	}else{
-
-		nav.classList.remove('white-nav');
-	}
 	}else {
 	nav.classList.remove("sticky");
 	}	

@@ -160,7 +160,7 @@ label {
 	flex-direction: column;	
 	justify-content: flex-end;
 	align-items: center;
-	background-color: inherit;
+	background-color: #fff;
 	height: 70px;
 	/*padding:0 0px;*/
 	padding-top: 4em;
@@ -267,14 +267,8 @@ nav {
 	margin-bottom: 1em;
 
 }
-#services .box{
-	display: inline-block;
-	width: 33%;
-	vertical-align: middle;
-	text-align: center;
-	padding: 10px 0 10px 0px;
-
-
+#services .flex-row{
+	margin:15px 0 15px 10px;
 }
 
 footer {

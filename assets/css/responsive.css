@@ -45,6 +45,7 @@ tablet landscape and desktop
 @media screen and (max-width: 760px){
 	.flex-row .col-60 ,.flex-row .col-30{
 		width: 100%;
+		margin: 25px auto 25px 10px;
 	}
 	.flex-row {
 		display: block;
