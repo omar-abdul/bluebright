@@ -1,0 +1,86 @@
+
+/*
+Smartphone portrait
+*/
+@media screen and (min-width:300px ) and (max-width: 479px){
+
+}
+/*
+Smartphone landscape
+*/
+
+@media only screen and (min-width: 480px) and (max-width: 767px){ 
+
+}
+
+/*
+tablet portrait
+*/
+
+@media only screen and (min-width: 768px) and (max-width: 991px){
+
+}
+
+/*
+tablet landscape and desktop
+*/
+
+@media only screen and (min-width: 992px) and (max-width: 1999px){
+
+}
+
+@media screen and (max-width: 999px) {
+	.flex-row .col-60.text, .flex-row .col-30.image{
+		width: 100%;
+		margin-top: 30px;
+	}
+	.flex-row .col-30.image{
+		margin-top: 1.5em;
+	}
+	.image img{
+		width:400px;
+	}
+} 
+
+@media screen and (max-width: 760px){
+	.flex-row .col-60 ,.flex-row .col-30{
+		width: 100%;
+	}
+	.flex-row {
+		display: block;
+	}
+}
+
+
+
+@media screen and (min-width : 600px) {
+	.nav-container {
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		-webkit-flex-direction: row;
+		-moz-box-orient: horizontal;
+		-moz-box-direction: normal;
+		-ms-flex-direction: row;
+		flex-direction: row;
+		justify-content: space-between;
+		padding: 10px 0;
+	}
+	.branding {
+		margin-left: 2.3em;
+	}
+	nav {
+		margin: 0 0.8em 0 0;
+	}
+	.header-container .h-text{
+		font-size: 40px;
+
+	}
+	..nav-container ul li {
+		padding: 0 20px 0 20px;
+	}
+	.nav-container ul {
+		margin-top: 0px; 
+
+	}
+
+}

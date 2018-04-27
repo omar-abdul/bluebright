@@ -78,36 +78,30 @@ label {
 
 
 
-.row {
+.flex-row {
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
+	flex-grow: 1;
+	flex-wrap: wrap;
 
 }
-.row .col-60{
+.flex-row .col-60{
 
 	width: 60%;
-	padding: 15px;
+
 	 
 }
-.row .col-30{
+.flex-row .col-30{
 
-	width: 40%;
-	padding: 15px;
+	width: 32%;
+
 }
 .image img{
-	 width: 100%;
+	 max-width: 85%;
 	 height: auto;
 }
 
-@media screen and (max-width: 600px){
-	.row .col-60 ,.row .col-30{
-		width: 100%;
-	}
-	.row {
-		flex-direction: column;
-	}
-}
 
 
 .submit-btn {
@@ -222,37 +216,6 @@ nav {
 }
 
 
-@media screen and (min-width : 600px) {
-	.nav-container {
-	-webkit-box-orient: horizontal;
-	-webkit-box-direction: normal;
-	-webkit-flex-direction: row;
-	-moz-box-orient: horizontal;
-	-moz-box-direction: normal;
-	-ms-flex-direction: row;
-		flex-direction: row;
-		justify-content: space-between;
-		padding: 10px 0;
-	}
-	.branding {
-	margin-left: 2.3em;
-	}
-	nav {
-	margin: 0 0.8em 0 0;
-	}
-	.header-container .h-text{
-		font-size: 40px;
-
-	}
-	.topnav ul li {
-		padding: 0 20px 0 20px;
-	}
-	.nav-container ul {
-	margin-top: 0px; 
-
-}
-
-}
 
 
 
@@ -314,13 +277,6 @@ nav {
 
 }
 
-@media screen and (max-width: 600px ){
-	#services .box{
-		width: 100%;
-
-	}
-	#about 
-}
 footer {
 	padding:20px;
 	color: #ffffff;
