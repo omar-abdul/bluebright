@@ -40,14 +40,14 @@ body{
 input[type='text'], 
  input[type='email'],
   textarea{
-    width: 100%;
+    width: 80%;
     padding: 12px;
     border: none;
     border-top: 1px solid #ccc;
 
 
     border-radius: 4px;
-    background-color: inherit;
+    background-color: transparent;
     font-size: 20px;
     font-family: inherit;
     resize: vertical;
@@ -66,9 +66,7 @@ input:focus, textarea:focus{
 }
 
 .form-input .submit-btn{
-
-	width: 100%;
-
+	width:80%;
 }
 
 label {
@@ -79,11 +77,16 @@ label {
 
 
 .flex-row {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;	
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	flex-grow: 1;
 	flex-wrap: wrap;
+	padding-top:20px;
 
 }
 .flex-row .col-60{
@@ -97,6 +100,12 @@ label {
 	width: 32%;
 
 }
+
+.flex-row .col-20 {
+	width: 23%;
+	padding: 0 0 30px 0;
+}
+
 .image img{
 	 max-width: 85%;
 	 height: auto;
@@ -118,19 +127,45 @@ label {
 }
 
 
+.decorated{
+     overflow: hidden;
+     text-align: center;
+ }
+.decorated > span{
+    position: relative;
+    display: inline-block;
+}
+.decorated > span:before, .decorated > span:after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    border-bottom: 2px solid #b2b4b7;
+    width: 592px; /* half of limiter */
+    margin: 0 20px;
+    z-index: -1px;
+}
+.decorated > span:before{
+    right: 100%;
+}
+.decorated > span:after{
+    left: 100%;
+}
+
+
 
 /*  header */
 
 .header-container {
-   background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../img/apartment-clean.jpg") no-repeat;
-   background-size: cover;
-   background-position: center;
-   height:100vh;
-   color: #fff;
+	background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../img/apartment-clean.jpg") no-repeat;
+	background-size: cover;
+	background-position: center;
+	height:100vh;
+	color: #fff;
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
 	display: -ms-flexbox;
+	display:flex;
 
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
@@ -138,9 +173,7 @@ label {
 	-moz-box-orient: vertical;
 	-moz-box-direction: normal;
 	-ms-flex-direction: column;
-
-   display:flex;
-   flex-direction: column;
+	flex-direction: column;
 
 
 }
@@ -233,47 +266,136 @@ nav {
 	position: fixed;
 	top: 0;
 	width: 100%;
+	z-index: 999;
 
 
 }
 
-.white-nav, .white-nav ul{
-	background-color: #fff;
 
-}
-
-.white-nav ul a{
-	color:  #000;
-}
-.white-nav li a.current{
-	color:#7bbffc;
-
-	font-weight: bold;
-}
-
-#contact-form {
+#contact {
 	padding: 20px;
 	margin:auto;
 	text-align: center;
 }
+#contact form{
+	width: 60%;
+	float: left;
+}
+#contact  .contact-info{
+	width: 40%;
+	float: left;
+	text-align: left;
+	margin:auto;
+}
 #about {
 	padding: 20px;
 	margin:auto;
+	margin-bottom: 6em;
 
 }
-#services {
+#accredit {
 	padding: 20px 10px 20px 10px;
-	margin-top: 1em;
-	margin-bottom: 1em;
+	margin:auto;
+	margin-bottom: 6em;
 
 }
-#services .flex-row{
+#accredit .flex-row{
 	margin:15px 0 15px 10px;
+	text-align: center;
 }
+
+#services {
+	padding : 20px;
+	margin:auto;
+	margin-bottom: 6em;
+	
+}
+#services .flex-row {
+	justify-content: space-evenly;
+	text-align: center;
+
+}
+#services img {
+	width:200px;
+	height: auto;
+	object-fit: cover;
+}
+#services h3 {
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.bubble .quote {
+	position: absolute;
+	color:rgba(255,255,255,0.5);
+	font-size: 5em; 
+}
+.bubble .leftq{
+	top:-60px;
+	left:7px;
+}
+.bubble .rightq{
+	bottom: -60px;
+	right: 7px;
+}
+
+ .bubble {
+	
+	background-color: #a3ddff;
+	text-align: center;
+	position: relative;
+	color: #fff;
+	padding: 30px;
+	max-width: 300px;
+	margin:0;
+
+}
+.bubble::after {
+	  content: " "; 
+	  height: 0; 
+	  width: 0; 
+	  position: absolute; 
+	  top: 100%; 
+	  border: solid transparent; 
+	  border-top-color: #a3ddff;
+	  border-left-color:#a3ddff;
+	  border-width: 10px; 
+	  left: 10%; 
+
+}
+
+
+ .user {
+	margin-top: 20px;
+}
+
+.user img{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%; 
+	object-fit: cover;
+}
+.user small{
+	font-style:italic;
+	font-weight: bold;
+}
+
+
 
 footer {
 	padding:20px;
 	color: #ffffff;
 	background-color: #3b3c3d;
 	text-align:center;
+}
+
+footer .social {
+	display: inline-block;
+	text-align:center;
+	font-size: 4em;
+
+}
+footer .social a {
+	text-decoration: none;
+	color: #fff;
 }

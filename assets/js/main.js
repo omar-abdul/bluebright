@@ -1,10 +1,14 @@
 var nav = document.getElementById('navbar');
-var section = document.getElementById('services');
+var services = document.getElementById('services');
+var about = document.getElementById('about');
+var contact = document.getElementById('contact');
 
 var sticky = nav.offsetTop +10;
-var secY = section.offsetTop ;
 
-function stickyNav(){
+function navMenu(){
+
+
+
 	if(window.pageYOffset >=sticky){
 
 	nav.classList.add("sticky");
@@ -14,11 +18,25 @@ function stickyNav(){
 	}	
 }
 
-function toggleMenu(){
-    var x = document.getElementById("navbar");
-    if (x.className === "nav-container") {
-        x.className += "  responsive ";
-    } else {
-        x.className = "nav-container";
+
+
+  var section = document.querySelectorAll(".section");
+  var sections = {};
+  var i = 0;
+
+  Array.prototype.forEach.call(section, function(e) {
+    sections[e.id] = e.offsetTop;
+  });
+
+  window.onscroll = function() {
+  	navMenu();
+    var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+
+    for (i in sections) {
+      if (sections[i] <= scrollPosition) {
+        document.querySelector('.current').setAttribute('class', ' ');
+        document.querySelector('a[href*=' + i + ']').setAttribute('class', 'current');
+      }
     }
-}
+  };
+var scroll = new SmoothScroll('a[href*="#"]');
