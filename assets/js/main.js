@@ -23,9 +23,12 @@ function navMenu(){
   var section = document.querySelectorAll(".section");
   var sections = {};
   var i = 0;
+  var header = document.querySelector('.nav-container').getBoundingClientRect();
+  var height = header.height;
 
   Array.prototype.forEach.call(section, function(e) {
-    sections[e.id] = e.offsetTop;
+    sections[e.id] = Math.abs(e.offsetTop - height);
+
   });
 
   window.onscroll = function() {
@@ -39,4 +42,6 @@ function navMenu(){
       }
     }
   };
-var scroll = new SmoothScroll('a[href*="#"]');
+var scroll = new SmoothScroll('a[href*="#"]',{
+	header:'[data-scroll-header]'
+});
